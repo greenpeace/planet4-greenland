@@ -8,11 +8,18 @@
 		"greenpeace/planet4-plugin-blocks" : "dev-develop"
 	},
 	"scripts": {
-		"core:language": "wp language core install da_DK;wp language core activate da_DK",
+		"core:language": "wp language core install da_DK; wp language core activate da_DK",
 		"core:language-kl" : "rsync -ar extra/languages/kl.* public/wp-content/languages/",
+		"install:plugin-wpml": "wp plugin install --activate https://raw.githubusercontent.com/greenpeace/planet4-3rdparty-plugins/master/sitepress-multilingual-cms.4.1.3.zip",
+		"install:plugin-wpml-management": "wp plugin install --activate https://raw.githubusercontent.com/greenpeace/planet4-3rdparty-plugins/master/wpml-translation-management.2.7.2.zip",
+		"install:plugin-wpml-stringtranslate": "wp plugin install --activate https://raw.githubusercontent.com/greenpeace/planet4-3rdparty-plugins/master/wpml-string-translation.2.9.1.zip",
+
 		"site:custom" : [
 			"@core:language",
-			"@core:language-kl"
+			"@core:language-kl",
+			"@install:plugin-wpml",
+			"@install:plugin-wpml-management",
+			"@install:plugin-wpml-stringtranslate"
 		]
 	}
 }
