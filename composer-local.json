@@ -8,6 +8,7 @@
 		"greenpeace/planet4-plugin-blocks" : "dev-develop"
 	},
 	"scripts": {
-		"site:custom" : []
+		"core:language": "wp language core install da_DK;wp language core activate da_DK",
+		"site:custom" : ["@core:language"]
 	}
 }
