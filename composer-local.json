@@ -9,6 +9,10 @@
 	},
 	"scripts": {
 		"core:language": "wp language core install da_DK;wp language core activate da_DK",
-		"site:custom" : ["@core:language"]
+		"core:language-kl" : "rsync -ar extra/languages/kl.* public/wp-content/languages/",
+		"site:custom" : [
+			"@core:language",
+			"@core:language-kl"
+		]
 	}
 }
