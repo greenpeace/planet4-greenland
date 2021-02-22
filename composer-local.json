@@ -1,19 +1,19 @@
 {
-	"name": "greenpeace/planet4-greenland",
-	"description": "Greenpeace P4 Greenland",
-	"license": "MIT",
-	"require": {
-		"greenpeace/planet4-child-theme-greenland" : "0.*",
-		"plugins/sitepress-multilingual-cms": "*",
-		"plugins/wpml-translation-management": "*",
-		"plugins/wpml-string-translation": "*"
-	},
-	"scripts": {
-		"core:language": "wp language core install da_DK; wp language core activate da_DK",
-		"core:language-kl" : "rsync -ar extra/languages/kl.* public/wp-content/languages/",
-		"site:custom" : [
-			"@core:language",
-			"@core:language-kl"
-		]
-	}
+    "name": "greenpeace/planet4-greenland",
+    "description": "Greenpeace P4 Greenland",
+    "license": "MIT",
+    "require": {
+        "greenpeace/planet4-child-theme-greenland" : "0.*",
+        "plugins/sitepress-multilingual-cms": "*",
+        "plugins/wpml-translation-management": "*",
+        "plugins/wpml-string-translation": "*"
+    },
+    "scripts": {
+        "core:language": "wp language core install da_DK; wp language core activate da_DK",
+        "core:language-kl" : "rsync -ar extra/languages/kl.* public/wp-content/languages/",
+        "site:custom" : [
+            "@core:language",
+            "@core:language-kl"
+        ]
+    }
 }
